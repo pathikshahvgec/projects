@@ -1,6 +1,18 @@
+from random import randint
+
 print("Welcome")
-number = int(input("Please guess a number :"))
-if (number % 5 == 0):
-    print("You Won")
-else:
-    print("You Lose")
+secret = randint(1, 100)
+number = 0
+
+while(number != secret):
+
+    number = int(input("Please guess a number :"))
+    
+    if(number > secret):
+        print("Too high, Go lower.")
+    elif(number < secret):
+        print("Too low, Go higher.")
+    else:
+        print("You Win!")
+        break
+
