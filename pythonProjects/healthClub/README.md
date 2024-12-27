@@ -21,7 +21,7 @@ A Python application that simulates a Point-of-Sale (POS) system for processing 
 ---
 
 ## File Structure
-- **main.py**: The main script for running the application.
+- **coffeeBarMenu.py**: The main script for running the application.
 - **promotion.py**: Contains discount logic for general promotions.
 - **starbuzz.py**: Includes discount logic for Starbuzz Card holders.
 - **transactionAPI.py**: Handles transaction saving and file operations.
@@ -38,4 +38,66 @@ A Python application that simulates a Point-of-Sale (POS) system for processing 
 
 1. Run the application:
    ```bash
-   python main.py
+   python coffeeBarMenu.py
+   ```
+2. Follow the on-screen prompts:
+   - Select an item from the menu.
+   - Enter your credit card number.
+   - Indicate if you have a Starbuzz Card for additional discounts.
+3. The application will calculate the total price, apply discounts, and save the transaction to the file.
+
+### Example Interaction
+```plaintext
+1. DONUT
+2. LATTE
+3. FILTER
+4. MUFFIN
+5. Quit
+Please select a menu option number from the options above: 2
+Enter your credit card number: 1234567890123456
+Do you also have a Starbuzz Card? (Y/N): Y
+Transaction saved for LATTE at $1.80.
+```
+
+---
+
+## Discount Logic
+
+### Promotion Discounts
+The `promotion.discount` function applies a default 10% discount unless specified otherwise.
+
+### Starbuzz Card Discounts
+The `starbuzz.discount` function applies an additional 5% discount for Starbuzz Card holders.
+
+---
+
+## Transaction Logging
+Transactions are saved in the `transaction.txt` file with the following format:
+```
+<creditCardNum><priceInCents><description>
+```
+
+Example:
+```
+12345678901234560200LATTE
+```
+
+---
+
+## Error Handling
+- **Invalid Menu Selection**: Prompts the user to select a valid option.
+- **File Not Found**: Alerts the user if the transaction file is missing.
+- **Negative Prices or Invalid Discount Rates**: Raises exceptions to prevent invalid operations.
+
+---
+
+## Contributing
+Contributions are welcome! Please open a pull request or file an issue to suggest improvements.
+
+---
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
+```
+
+Let me know if you'd like any adjustments!
