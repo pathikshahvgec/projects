@@ -1,6 +1,3 @@
-Here’s a sample `README.md` file for your project based on the provided source code:
-
-```markdown
 # Surfer Lookup Application
 
 This application provides functionality to look up surfer details from a database or a CSV file using a surfer's ID. It demonstrates Python's `sqlite3` module for database operations and file handling for CSV processing.
