@@ -1,0 +1,11 @@
+CALCULATOR - With Basic Operations
+
+1. Which basic operations do you want to implement.
+Ans. I want to implement Addition, Subtraction, Multiplication and Division 
+     oprations.
+
+2, Do you want result to be displayed after each opration?
+Ans, Yes, I want result tob displayed after each opration.
+
+3. Do you want this Calc to be working forever?
+Ans. Yes, I want this Calc to be working forever.
